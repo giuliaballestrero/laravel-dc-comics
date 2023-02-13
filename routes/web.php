@@ -14,5 +14,10 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-Route::get('/', [ComicController::class, 'index'])->name('comics.index');
-Route::get('/{id}', [ComicController::class, 'show'])->name('comics.show');
+Route::get('/', function() {
+    return redirect('/comics');
+});
+
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
+

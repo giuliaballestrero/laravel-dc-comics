@@ -31,7 +31,7 @@
                         <div class="card-img">
                             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="img-fluid">
                         </div>
-                        <div class="card-subtitle">
+                        <div class="card-subtitle pt-4">
                             <h3>
                                {{ $comic->series }}
                             </h3>
