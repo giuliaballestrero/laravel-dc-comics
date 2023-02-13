@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('sale_date')->nullable();
             $table->string('type', 50);
             $table->timestamps();
-            $table->save();
         });
     }
 
