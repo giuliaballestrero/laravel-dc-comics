@@ -20,7 +20,7 @@
     <main class="bg-dark text-light vh-100">
         <div class="container py-5">
             <div class="row">
-
+                @dump(Route::currentRouteName())
                 <div class="col-12 d-flex ">
                     <h1>Admin Control Section</h1>
                     <a class="ms-auto me-5 btn btn-success text-uppercase mb-5" href="{{ route('comics.create') }}">

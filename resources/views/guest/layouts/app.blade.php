@@ -27,15 +27,8 @@
     
 
     <main class="bg-light">
-        @yield('jumbo')
-        @yield('button')
         @yield('main-content')
     </main>
-
-    <footer>
-        {{--Mettere un footer utilizzando include--}}
-        @include('partials.footer')
-    </footer>
 
 </body>
 
