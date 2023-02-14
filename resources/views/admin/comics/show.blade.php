@@ -49,7 +49,6 @@
                             <p>
                                 Price &euro;{{ $comic->price}}
                             </p>
-                            <a href="#" class="btn btn-warning btn-sm px-3">Add To Cart</a>
                         </div>
                     </div>
             </div>
