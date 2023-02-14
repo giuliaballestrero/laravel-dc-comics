@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="bg-dark text-light vh-100">
+<body class="bg-dark text-light">
 
     <main>
         <div class="container py-5">
@@ -80,13 +80,11 @@
                             <input type="text" name="type">
                         </div>
 
-                        <div>
-
-                            <div class="pt-4">
-                                <button type="submit" class="btn btn-success">
+                        <div class="pt-4">
+                            <button type="submit" class="btn btn-success">
                                     Create
-                                </button>
-                            </div>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

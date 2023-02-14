@@ -1,5 +1,5 @@
 @dump(Route::currentRouteName())
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary mx-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ Vite::asset('resources/assets/img/dc-logo.png') }}" alt="dc logo">

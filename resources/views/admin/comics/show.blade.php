@@ -15,12 +15,11 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 
-    <main class="bg-dark">
+    <main >
         <div class="container py-5">
             <div class="row">
-                @dump(Route::currentRouteName())
                 <div class="col-12">
                     <a class="ms-auto btn btn-success text-uppercase" href="{{ route('comics.index') }}">
                         Go Back
