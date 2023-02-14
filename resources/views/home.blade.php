@@ -1,7 +1,14 @@
-use Illuminate\Support\Str;
 @extends('guest.layouts.app')
 
 @section('title', 'Dc Comics | Homepage')
+
+
+@section('jumbo')
+<section class="jumbo">
+    <!--inserisco sfondo in app.scss-->
+    <a class="btn btn-primary text-uppercase my_series_btn" href="#" role="button">current series</a> 
+</section>
+@endsection
 
 @section('main-content')
     <section class="bg-dark pt-5">

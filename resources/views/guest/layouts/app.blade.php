@@ -27,6 +27,7 @@
     
 
     <main class="bg-light">
+        @yield('jumbo')
         @yield('main-content')
     </main>
 

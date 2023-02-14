@@ -1,1 +1,13 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.jumbo {
+    height: 400px;
+    background-image: url("../assets/img/jumbotron.jpg");
+    position: relative;
+    }
+    
+    .my_series_btn {
+        position: absolute;
+        bottom: -20px;
+        left: 310px;
+    }
