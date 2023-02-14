@@ -17,42 +17,50 @@
 
 <body>
 
-    <main class="bg-light">
+    <main class="bg-dark text-light vh-100">
         <div class="container py-5">
             <div class="row">
+
+                <div class="col-12 d-flex ">
+                    <h1>Admin Control Section</h1>
+                    <a class="ms-auto me-5 btn btn-success text-uppercase mb-5" href="{{ route('comics.create') }}">
+                        >> Insert New Comic << 
+                    </a>
+                </div>
+
                 <div class="col-12">
-                    <table class="table">
+                    <table class="table text-light">
                         <thead>
                             <tr>
-                                <th role="col">ID</th>
-                                <th role="col">Title</th>
-                                <th role="col">Price</th>
-                                <th role="col">Sale Date</th>
-                                <th role="col">Type</th>
-                                <th role="col">Buttons</th>
+                                <th role="col" class="text-uppercase">ID</th>
+                                <th role="col" class="text-uppercase">Title</th>
+                                <th role="col" class="text-uppercase">Price</th>
+                                <th role="col" class="text-uppercase">Sale Date</th>
+                                <th role="col" class="text-uppercase">Type</th>
+                                <th role="col" class="text-uppercase">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($comics as $comic)
-                            <tr>
-                                <th scope="row">{{$comic->id}}</th>
-                                <td>{{$comic->title}}</td>
-                                <td>{{$comic->price}}&euro;</td>
-                                <td>{{$comic->sale_date}}</td>
-                                <td>{{$comic->type}}</td>
-                                <td>
-                                    <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary btn-sm">Show comic</a>
-                                    <a href="#" class="btn btn-success btn-sm">Edit</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
-                                @endforeach
-    
+                                <tr>
+                                    <th scope="row">{{ $comic->id }}</th>
+                                    <td>{{ $comic->title }}</td>
+                                    <td>{{ $comic->price }}&euro;</td>
+                                    <td>{{ $comic->sale_date }}</td>
+                                    <td class="text-capitalize">{{ $comic->type }}</td>
+                                    <td>
+                                        <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-sm me-2">Show comic</a>
+                                        <a href="#" class="btn btn-warning btn-sm me-2">Edit</a>
+                                        <a href="#" class="btn btn-danger btn-sm me-2">Delete</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+
                         </tbody>
                     </table>
-            </div>
+                </div>
 
-        </div>
+            </div>
     </main>
 
 </body>
