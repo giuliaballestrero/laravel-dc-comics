@@ -9,7 +9,7 @@
         @yield('title', 'DC Comics')
     </title>
 
-    <link rel="icon" type="image/x-icon" href="/resources/assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/assets/img/favicon.ico') }}">
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
