@@ -22,7 +22,7 @@
 <body>
     <header>
         {{--Mettere un header utilizzando include--}}
-        @include('partials.header')
+        @include('guest.partials.header')
     </header>
     
 

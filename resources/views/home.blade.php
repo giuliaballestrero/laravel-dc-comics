@@ -18,10 +18,6 @@
                 </div>
                 </div>
             </div>
-            @empty
-            <div>
-                No Comics to show.
-            </div>
             @endforeach
         </div>
     </div>

@@ -1,6 +1,6 @@
+@dump(Route::currentRouteName())
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        @dump(Route::currentRouteName())
         <a class="navbar-brand" href="#">
             <img src="{{Vite::asset('resources/assets/img/dc-logo.png')}}" alt="dc logo">
             <!-- Per inserire immagini -> Vite::asset('resources/assets/img/logo.png')-->
@@ -38,7 +38,7 @@
             <a class="nav-link" href="#">Shop</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-sm btn-success text-uppercase" href="#{{ route('admin.comics.index') }}">Admin Login</a>
+                <a class="nav-link btn btn-sm btn-success text-uppercase" href="#">Admin Login</a>
             </li>
             
         </ul>
