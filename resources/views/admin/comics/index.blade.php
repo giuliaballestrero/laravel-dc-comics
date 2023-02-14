@@ -15,9 +15,9 @@
 
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-    <main class="bg-dark text-light vh-100">
+    <main>
         <div class="container py-5">
             <div class="row">
                 @dump(Route::currentRouteName())
@@ -25,6 +25,9 @@
                     <h1>Admin Control Section</h1>
                     <a class="ms-auto me-5 btn btn-success text-uppercase mb-5" href="{{ route('comics.create') }}">
                         >> Insert New Comic << 
+                    </a>
+                    <a class="ms-auto me-5 btn btn-danger text-uppercase mb-5" href="{{ route('home') }}">
+                        Logout
                     </a>
                 </div>
 

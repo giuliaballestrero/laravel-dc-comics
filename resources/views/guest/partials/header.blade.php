@@ -41,7 +41,7 @@
 
             </ul>
             <div class="nav-item text-light pe-4">
-                <a class="nav-link btn btn-sm btn-success text-uppercase p-2" href="{{route('comics.index')}}"">Admin Login</a>
+                <a class="nav-link btn btn-sm btn-success text-uppercase p-2" href="{{route('comics.index')}}">Admin Login</a>
             </div>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

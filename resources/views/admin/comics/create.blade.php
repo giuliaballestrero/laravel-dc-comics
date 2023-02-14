@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dc Comics | Index</title>
+    <title>Dc Comics | Add New Comic</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,17 +15,20 @@
 
 </head>
 
-<body>
+<body class="bg-dark text-light vh-100">
 
-    <main class="bg-dark text-light vh-100">
+    <main>
         <div class="container py-5">
             <div class="row">
                 @dump(Route::currentRouteName())
                 <div class="col-12">
                     <h1 class="pb-3">Create a new Comic</h1>
+                    <a class="ms-auto btn btn-sm btn-primary text-uppercase mb-4" href="{{ route('comics.index') }}">
+                        Go Back
+                    </a>
                 </div>
                 <div class="col-12">
-                    <form action="{{route('comics.store') }}" method="POST">
+                    <form action="{{ route('comics.store') }}" method="POST">
                         @csrf
                         <div class="py-2">
                             <label for="name" class="form-label">
@@ -79,11 +82,11 @@
 
                         <div>
 
-                        <div class="pt-4">
-                            <button type="submit" class="btn btn-success">
-                                Create
-                            </button>
-                        </div>
+                            <div class="pt-4">
+                                <button type="submit" class="btn btn-success">
+                                    Create
+                                </button>
+                            </div>
                     </form>
                 </div>
             </div>
