@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Redirect;
 
 class ComicController extends Controller
 {
@@ -15,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('comics.index', compact('comics'));
+        return view('admin.comics.index', compact('comics'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        return view('admin.comics.create');
     }
 
     /**
@@ -47,7 +48,7 @@ class ComicController extends Controller
         $newComic->type = $data['type'];
         $newComic->save();
 
-        //reteurn redirect()->route('comic.show, $mewComic->id');
+        return redirect()->route('admin.comics.show', $newComic->id);
     }
 
     /**
@@ -59,7 +60,7 @@ class ComicController extends Controller
     public function show($id)
     {
         $comic = Comic::findOrFail($id);
-        return view('comics.show', compact('comic'));
+        return view('admin.comics.show', compact('comic'));
     }
 
     /**

@@ -17,10 +17,16 @@
 
 <body>
 
-    <main class="bg-light">
-        <div class="container">
+    <main class="bg-dark">
+        <div class="container py-5">
             <div class="row">
                 @dump(Route::currentRouteName())
+                <div class="col-12">
+                    <a class="ms-auto btn btn-success text-uppercase" href="{{ route('comics.index') }}">
+                        Go Back
+                    </a>
+                    <h1 class="text-light py-3">{{$comic->title}} Details</h1>
+                </div>
                 <div class="col-12">
                     <div class="card p-5 text-center">
                         <div class="card-title">
@@ -40,6 +46,10 @@
                             <p>
                                 {{ $comic->description }}
                             </p>
+                            <p>
+                                Price &euro;{{ $comic->price}}
+                            </p>
+                            <a href="#" class="btn btn-warning btn-sm px-3">Add To Cart</a>
                         </div>
                     </div>
             </div>
