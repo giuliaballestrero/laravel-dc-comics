@@ -14,7 +14,10 @@ use App\Http\Controllers\Guest\PageController as PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/home', [PageController::class, 'home'])->name('home');
+Route::get('/', function() {
+    return redirect('/home');
+});
 
 //Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 //Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');

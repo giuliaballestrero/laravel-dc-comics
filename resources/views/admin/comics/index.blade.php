@@ -53,7 +53,7 @@
                                     <td class="text-capitalize">{{ $comic->type }}</td>
                                     <td>
                                         <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-sm me-2">Show comic</a>
-                                        <a href="#" class="btn btn-warning btn-sm me-2">Edit</a>
+                                        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning btn-sm me-2">Edit</a>
                                         <a href="#" class="btn btn-danger btn-sm me-2">Delete</a>
                                     </td>
                                 </tr>

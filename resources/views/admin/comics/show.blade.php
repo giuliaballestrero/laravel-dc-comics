@@ -48,6 +48,13 @@
                             <p>
                                 Price &euro;{{ $comic->price}}
                             </p>
+                            <p>
+                                Type:{{ $comic->type}}
+                            </p>
+                        </div>
+                        <div>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning btn-sm me-2">Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm me-2">Delete</a>
                         </div>
                     </div>
             </div>
