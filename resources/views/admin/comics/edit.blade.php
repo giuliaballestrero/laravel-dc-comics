@@ -29,37 +29,37 @@
                 </div>
                 <div class="col-12">
                     <form action="{{ route('comics.update', compact('comic')) }}" method="POST">
-                        {{--mettere sempre nei form (_token)--}}
+                        {{-- mettere sempre nei form (_token) --}}
                         @csrf
-                        {{--inserisco il metodo PUT--}}
+                        {{-- inserisco il metodo PUT --}}
                         @method('PUT')
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Title
                             </label>
-                            <input type="text" name="title" value="{{$comic->title}}">
+                            <input type="text" name="title" value="{{ $comic->title }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Description
                             </label>
-                            <input type="text" name="description" value="{{$comic->description}}">
+                            <input type="text" name="description" value="{{ $comic->description }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Thumb
                             </label>
-                            <input type="text" name="thumb" value="{{$comic->thumb}}">
+                            <input type="text" name="thumb" value="{{ $comic->thumb }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Price
                             </label>
-                            <input type="text" name="price" value="{{$comic->price}}">
+                            <input type="text" name="price" value="{{ $comic->price }}">
                         </div>
 
 
@@ -67,21 +67,21 @@
                             <label for="name" class="form-label">
                                 Series
                             </label>
-                            <input type="text" name="series" value="{{$comic->series}}">
+                            <input type="text" name="series" value="{{ $comic->series }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Sale Date
                             </label>
-                            <input type="text" name="sale_date" value="{{$comic->sale_date}}">
+                            <input type="text" name="sale_date" value="{{ $comic->sale_date }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Type
                             </label>
-                            <input type="text" name="type" value="{{$comic->type}}">
+                            <input type="text" name="type" value="{{ $comic->type }}">
                         </div>
 
                         <div class="pt-4">
