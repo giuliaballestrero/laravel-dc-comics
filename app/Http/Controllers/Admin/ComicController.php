@@ -43,6 +43,7 @@ class ComicController extends Controller
             // array associativo
             //dd($request);
             'title'=> 'required|min:3|max:60'
+
         ]);
         
         $data = $request->all();
@@ -96,7 +97,14 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        //METTERE PRIMA DEL SAVE!!!!
+        $request-> validate([
+        // array associativo
+        //dd($request);
+        'title'=> 'required|min:3|max:60'
+       ]);
+       
         $data = $request->all();
         $comic = Comic::findOrFail($id); 
         $comic->update($data);
