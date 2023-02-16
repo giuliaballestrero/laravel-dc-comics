@@ -39,12 +39,37 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //METTERE PRIMA DEL SAVE!!!!
-        $request-> validate([
+        $request-> validate(
+            
+        [
             // array associativo
             //dd($request);
-            'title'=> 'required|min:3|max:60'
+            'title'=> 'required|min:3|max:60',
+            'description'=> 'required|min:10|max:200',
+            'thumb'=> 'required',
+            'price'=> 'required',
+            'series'=> 'required|min:3|max:60',
+            'sale_date'=> 'required',
+            'type'=> 'required|min:3|max:30',
 
-        ]);
+        ],
+
+        [
+            'title.required' => 'Per favore, inserire il titolo',
+            'description.min' => 'Descrizione troppo corta, inserire almeno 10 caratteri',
+            'description.max' => 'Superati i caratteri masssimi per la descrizione(200)',
+            'thumb' => 'Inserire un immagine',
+            'price'=> 'prezzo mancante',
+            'series.required' => 'Indicare la serie',
+            'series.min' => 'Serie è troppo corta, inserire almeno 3 caratteri',
+            'serie.max' => 'Superati i caratteri masssimi per la serie(60)',
+            'sale_date.required' => 'Data di uscita non inserita',
+            'type.required' => 'Indicare la categoria',
+            'type.min' => 'Type è troppo corto, inserire almeno 3 caratteri',
+            'type.max' => 'Superati i caratteri masssimi per Type(30)',
+
+        ]
+    );
         
         $data = $request->all();
         $newComic = new Comic();
@@ -99,12 +124,37 @@ class ComicController extends Controller
     public function update(Request $request, $id)
     {   
         //METTERE PRIMA DEL SAVE!!!!
-        $request-> validate([
-        // array associativo
-        //dd($request);
-        'title'=> 'required|min:3|max:60'
-       ]);
-       
+        $request-> validate(
+            [
+            // array associativo
+            //dd($request);
+            'title'=> 'required|min:3|max:60',
+            'description'=> 'required|min:10|max:200',
+            'thumb'=> 'required',
+            'price'=> 'required',
+            'series'=> 'required|min:3|max:60',
+            'sale_date'=> 'required',
+            'type'=> 'required|min:3|max:30',
+
+            ],
+
+            [
+                'title.required' => 'Per favore, inserire il titolo',
+                'description.min' => 'Descrizione troppo corta, inserire almeno 10 caratteri',
+                'description.max' => 'Superati i caratteri masssimi per la descrizione(200)',
+                'thumb' => 'Inserire un immagine',
+                'price'=> 'prezzo mancante',
+                'series.required' => 'Indicare la serie',
+                'series.min' => 'Serie è troppo corta, inserire almeno 3 caratteri',
+                'serie.max' => 'Superati i caratteri masssimi per la serie(60)',
+                'sale_date.required' => 'Data di uscita non inserita',
+                'type.required' => 'Indicare la categoria',
+                'type.min' => 'Type è troppo corto, inserire almeno 3 caratteri',
+                'type.max' => 'Superati i caratteri masssimi per Type(30)',
+    
+            ]
+    );
+
         $data = $request->all();
         $comic = Comic::findOrFail($id); 
         $comic->update($data);

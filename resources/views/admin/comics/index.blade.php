@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="bg-dark text-light">
+<body class="bg-dark">
 
     <main>
         <div class="container py-5">
@@ -32,14 +32,16 @@
                 </div>
 
                 <div class="col-12">
-                    <table class="table text-light">
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
                                 <th role="col" class="text-uppercase">ID</th>
-                                <th role="col" class="text-uppercase">Title</th>
-                                <th role="col" class="text-uppercase">Price</th>
-                                <th role="col" class="text-uppercase">Sale Date</th>
+                                <th role="col" class="text-uppercase">Comic Title</th>
+                                <th role="col" class="text-uppercase">Description</th>
+                                <th role="col" class="text-uppercase">Image</th>
+                                <th role="col" class="text-uppercase">Date</th>
                                 <th role="col" class="text-uppercase">Type</th>
+                                <th role="col" class="text-uppercase">Price</th>
                                 <th role="col" class="text-uppercase">Actions</th>
                             </tr>
                         </thead>
@@ -48,20 +50,24 @@
                                 <tr>
                                     <th scope="row">{{ $comic->id }}</th>
                                     <td>{{ $comic->title }}</td>
-                                    <td>{{ $comic->price }}&euro;</td>
+                                    <td>{{ $comic->description }}</td>
+                                    <td><img class="img-thumbnail" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"> </td>
                                     <td>{{ $comic->sale_date }}</td>
                                     <td class="text-capitalize">{{ $comic->type }}</td>
+                                    <td>{{ $comic->price }}&euro;</td>
                                     <td>
-                                        <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-sm me-2">Show comic</a>
-                                        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning btn-sm me-2">Edit</a>
+                                        <div class="d-flex flex-column">
+                                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-sm mb-2">Show comic</a>
+                                        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning btn-sm mb-2">Edit</a>
                                         <form class="d-inline" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                             @csrf
                                             {{--aggiungere il metodo DELETE--}}
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm me-2 d-inline">
+                                            <button type="submit" class="btn btn-danger btn-sm mb-2">
                                                 Delete
                                             </button>
                                         </form>
+                                        </div>
                                         
                                     </td>
                                 </tr>
