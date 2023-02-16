@@ -27,6 +27,7 @@ class ComicController extends Controller
     public function create()
     {
         return view('admin.comics.create');
+
     }
 
     /**
@@ -37,10 +38,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //METTERE PRIMA DEL SAVE!!!!
+        $request-> validate([
+            // array associativo
+            //dd($request);
+            'title'=> 'required|min:3|max:60'
+        ]);
+        
         $data = $request->all();
         $newComic = new Comic();
         $newComic->fill($data);
         $newComic->save();
+
 
         //$newComic = new Comic();
         //$newComic->title = $data['title'];
@@ -91,6 +100,7 @@ class ComicController extends Controller
         $data = $request->all();
         $comic = Comic::findOrFail($id); 
         $comic->update($data);
+
         //ritorno sulla pagina dello show
         return redirect()->route('comics.show', $comic->id);
     }

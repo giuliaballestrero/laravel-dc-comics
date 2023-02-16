@@ -30,6 +30,18 @@
                 <div class="col-12">
                     <form action="{{ route('comics.store') }}" method="POST">
                         @csrf
+                        <!--aggiungo un div per mostrare l'errore tramite foreach e endif per visualizzarlo dopo-->
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>
+                                            {{$error}}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="py-2">
                             <label for="name" class="form-label">
                                 Title
