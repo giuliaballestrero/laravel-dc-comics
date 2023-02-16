@@ -20,7 +20,7 @@
     <main >
         <div class="container py-5">
             <div class="row">
-                
+
                 <div class="col-12">
                     <a class="ms-auto btn btn-success text-uppercase" href="{{ route('comics.index') }}">
                         Go Back
@@ -28,6 +28,12 @@
                     <h1 class="text-light py-3">{{$comic->title}} Details</h1>
                 </div>
                 <div class="col-12">
+                <!--Aggiungo un if session per i messaggi di conferma azioni-->
+                @if (session('message'))
+                    <div class="alert alert-{{ session('alert-type') }}">
+                        {{ session('message')  }}
+                    </div>
+                @endif
                     <div class="card p-5 text-center">
                         <div class="card-title">
                             <h1>

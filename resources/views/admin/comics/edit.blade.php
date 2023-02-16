@@ -58,7 +58,7 @@
                             <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <input type="text" name="description" value="{{ $comic->description }}">
+                            <textarea type="text" name="description"> {{ $comic->description }}</textarea>
                         </div>
 
                         <div class="py-2">

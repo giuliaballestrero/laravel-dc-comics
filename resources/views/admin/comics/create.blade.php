@@ -53,7 +53,7 @@
                             <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <input type="text" name="description">
+                            <textarea type="text" name="description"></textarea>
                         </div>
 
                         <div class="py-2">

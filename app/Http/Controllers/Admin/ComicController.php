@@ -87,7 +87,7 @@ class ComicController extends Controller
         //$newComic->type = $data['type'];
         //$newComic->save();
 
-        return redirect()->route('comics.show', $newComic->id)->with('message', "$newComic->title has been created")->with('alert-type', 'info');
+        return redirect()->route('comics.show', $newComic->id)->with('message', "$newComic->title has been created")->with('alert-type', 'success');
     }
 
     /**
