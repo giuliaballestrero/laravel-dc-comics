@@ -87,7 +87,7 @@ class ComicController extends Controller
         //$newComic->type = $data['type'];
         //$newComic->save();
 
-        return redirect()->route('comics.show', $newComic->id);
+        return redirect()->route('comics.show', $newComic->id)->with('message', "$newComic->title has been created")->with('alert-type', 'info');
     }
 
     /**
@@ -160,7 +160,7 @@ class ComicController extends Controller
         $comic->update($data);
 
         //ritorno sulla pagina dello show
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.show', $comic->id)->with('message', "$comic->title has been edited")->with('alert-type', 'success');
     }
 
     /**
@@ -175,6 +175,6 @@ class ComicController extends Controller
         $comic->delete();
         //dd($comic);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message', "$comic->title has been deleted")->with('alert-type', 'danger');
     }
 }

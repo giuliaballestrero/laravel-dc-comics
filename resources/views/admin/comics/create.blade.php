@@ -27,7 +27,7 @@
             </div>
 
             <div class="row">
-                <div class="col-16">
+                <div class="col-12">
                     <form action="{{ route('comics.store') }}" method="POST">
                         @csrf
                         <!--aggiungo un div per mostrare l'errore tramite foreach e endif per visualizzarlo dopo-->
@@ -53,7 +53,7 @@
                             <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <textarea type="text" name="description"></textarea>
+                            <input type="text" name="description">
                         </div>
 
                         <div class="py-2">

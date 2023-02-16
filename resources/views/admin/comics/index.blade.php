@@ -20,7 +20,7 @@
     <main>
         <div class="container py-5">
             <div class="row">
-                @dump(Route::currentRouteName())
+                {{--@dump(Route::currentRouteName())--}}
                 <div class="col-12 d-flex justify-content-between py-4">
                     <h1 class="text-light">Admin Control Section</h1>
                     <div>
@@ -32,6 +32,13 @@
                         </a>
                     </div>
                 </div>
+
+                <!--Aggiungo un if session per i messaggi di conferma azioni-->
+                @if (session('message'))
+                    <div class="alert alert-{{ session('alert-type') }}">
+                        {{ session('message')  }}
+                    </div>
+                @endif
 
                 <div class="col-12">
                     <table class="table table-dark table-striped">

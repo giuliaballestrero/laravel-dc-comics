@@ -20,6 +20,7 @@
     <main >
         <div class="container py-5">
             <div class="row">
+                
                 <div class="col-12">
                     <a class="ms-auto btn btn-success text-uppercase" href="{{ route('comics.index') }}">
                         Go Back
