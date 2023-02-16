@@ -21,14 +21,16 @@
         <div class="container py-5">
             <div class="row">
                 @dump(Route::currentRouteName())
-                <div class="col-12 d-flex ">
-                    <h1>Admin Control Section</h1>
-                    <a class="ms-auto me-5 btn btn-success text-uppercase mb-5" href="{{ route('comics.create') }}">
-                        >> Insert New Comic << 
-                    </a>
-                    <a class="ms-auto me-5 btn btn-danger text-uppercase mb-5" href="{{ route('home') }}">
-                        Logout
-                    </a>
+                <div class="col-12 d-flex justify-content-between py-4">
+                    <h1 class="text-light">Admin Control Section</h1>
+                    <div>
+                        <a class="ms-auto me-3 btn btn-success text-uppercase mb-5" href="{{ route('comics.create') }}">
+                        >> Add New Comic << 
+                        </a>
+                        <a class="ms-auto btn btn-danger text-uppercase mb-5" href="{{ route('home') }}">
+                            Logout
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-12">

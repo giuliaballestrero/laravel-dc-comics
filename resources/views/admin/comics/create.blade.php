@@ -23,11 +23,11 @@
                 @dump(Route::currentRouteName())
                 <div class="col-12">
                     <h1 class="pb-3">Create a new Comic</h1>
-                    <a class="ms-auto btn btn-sm btn-primary text-uppercase mb-4" href="{{ route('comics.index') }}">
-                        Go Back
-                    </a>
                 </div>
-                <div class="col-12">
+            </div>
+
+            <div class="row">
+                <div class="col-16">
                     <form action="{{ route('comics.store') }}" method="POST">
                         @csrf
                         <!--aggiungo un div per mostrare l'errore tramite foreach e endif per visualizzarlo dopo-->
@@ -43,28 +43,28 @@
                             </div>
                         @endif
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Title
                             </label>
                             <input type="text" name="title">
                         </div>
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <input type="text" name="description">
+                            <textarea type="text" name="description"></textarea>
                         </div>
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Thumb
                             </label>
                             <input type="text" name="thumb">
                         </div>
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Price
                             </label>
                             <input type="text" name="price">
@@ -72,29 +72,32 @@
 
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Series
                             </label>
                             <input type="text" name="series">
                         </div>
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Sale Date
                             </label>
                             <input type="text" name="sale_date">
                         </div>
 
                         <div class="py-2">
-                            <label for="name" class="form-label">
+                            <label for="name" class="form-label d-block">
                                 Type
                             </label>
                             <input type="text" name="type">
                         </div>
 
                         <div class="pt-4">
+                            <a class="ms-auto btn btn-primary me-3" href="{{ route('comics.index') }}">
+                                Go Back
+                            </a>
                             <button type="submit" class="btn btn-success">
-                                    Create
+                                Create
                             </button>
                         </div>
                     </form>
