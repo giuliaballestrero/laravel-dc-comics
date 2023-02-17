@@ -46,28 +46,28 @@
                             <label for="name" class="form-label d-block">
                                 Title
                             </label>
-                            <input type="text" name="title">
+                            <input type="text" name="title"  value="{{ old('title') }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <textarea type="text" name="description"></textarea>
+                            <textarea type="text" name="description"> {{ old('description')}}</textarea>
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Thumb
                             </label>
-                            <input type="text" name="thumb">
+                            <input type="text" name="thumb" value="{{ old('thumb') }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Price
                             </label>
-                            <input type="text" name="price">
+                            <input type="text" name="price" value="{{ old('price') }}">
                         </div>
 
 
@@ -75,21 +75,21 @@
                             <label for="name" class="form-label d-block">
                                 Series
                             </label>
-                            <input type="text" name="series">
+                            <input type="text" name="series" value="{{ old('series') }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Sale Date
                             </label>
-                            <input type="text" name="sale_date">
+                            <input type="text" name="sale_date" value="{{ old('sale_date') }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Type
                             </label>
-                            <input type="text" name="type">
+                            <input type="text" name="type" value="{{ old('type') }}">
                         </div>
 
                         <div class="pt-4">

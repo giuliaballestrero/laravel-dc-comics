@@ -33,14 +33,14 @@
                         @csrf
                         {{-- inserisco il metodo PUT --}}
                         @method('PUT')
-                        
+
                         <!--aggiungo un div per mostrare l'errore tramite foreach e endif per visualizzarlo dopo-->
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>
-                                            {{$error}}
+                                            {{ $error }}
                                         </li>
                                     @endforeach
                                 </ul>
@@ -51,28 +51,28 @@
                             <label for="name" class="form-label d-block">
                                 Title
                             </label>
-                            <input type="text" name="title" value="{{ old('title') ?? $comic->title }}">
+                            <input type="text" name="title" value="{{ old('title', $comic->title) }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Description
                             </label>
-                            <textarea type="text" name="description"> {{ old('description') ?? $comic->description }}</textarea>
+                            <textarea type="text" name="description"> {{ old('description', $comic->description) }}</textarea>
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Thumb
                             </label>
-                            <input type="text" name="thumb" value="{{ old('thumb') ?? $comic->thumb }}">
+                            <input type="text" name="thumb" value="{{ old('thumb', $comic->thumb) }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Price
                             </label>
-                            <input type="text" name="price" value="{{ old('price') ?? $comic->price }}">
+                            <input type="text" name="price" value="{{ old('price', $comic->price) }}">
                         </div>
 
 
@@ -80,21 +80,21 @@
                             <label for="name" class="form-label d-block">
                                 Series
                             </label>
-                            <input type="text" name="series" value="{{ old('series') ?? $comic->series }}">
+                            <input type="text" name="series" value="{{ old('series', $comic->series) }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Sale Date
                             </label>
-                            <input type="text" name="sale_date" value="{{ old('sale_date') ?? $comic->sale_date }}">
+                            <input type="text" name="sale_date" value="{{ old('sale_date', $comic->sale_date) }}">
                         </div>
 
                         <div class="py-2">
                             <label for="name" class="form-label d-block">
                                 Type
                             </label>
-                            <input type="text" name="type" value="{{ old('type') ?? $comic->type }}">
+                            <input type="text" name="type" value="{{ old('type', $comic->type) }}">
                         </div>
 
                         <div class="pt-4">
